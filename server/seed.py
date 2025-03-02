@@ -9,6 +9,8 @@ with app.app_context():
     # Delete all rows in the "earthquakes" table
     Earthquake.query.delete()
 
+    print('seeding!!!')
+
     # Add several Earthquake instances to the "earthquakes" table
     db.session.add(Earthquake(magnitude=9.5, location="Chile", year=1960))
     db.session.add(Earthquake(magnitude=9.2, location="Alaska", year=1964))
@@ -18,3 +20,5 @@ with app.app_context():
 
     # Commit the transaction
     db.session.commit()
+
+    print('seeding!!')
